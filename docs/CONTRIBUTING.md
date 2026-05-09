@@ -1,109 +1,136 @@
-# Contributing
+<div align="center">
 
-## Website
+<img width="160" src="./web/img/logo.png" />
 
-With the [Live Server extension](vscode:extension/ritwickdey.LiveServer)
-installed, you can hit `Ctrl + Shift + P` to open the command palette. Start
-typing "live server" and you should see options to start and stop the server.
+# 🎵 Topsify
 
-This should open your browser automatically, but if not, you should be able to
-visit (http://127.0.0.1:5500/index.html)[http://127.0.0.1:5500/index.html] in
-your browser to see the website.
+### Plataforma educativa de streaming musical y análisis de datos 🚀
 
-## Resetting the database
+<p align="center">
+  <b>Topsify</b> es un proyecto orientado al aprendizaje de bases de datos, SQL y análisis de plataformas de streaming musical.  
+  Incluye ejercicios, workshops y una estructura completa de datos inspirada en servicios modernos de música.
+</p>
 
-If you mess up the database and you want to reset it to its original state, run
+<p align="center">
+  <img src="https://img.shields.io/badge/SQLite-Database-003B57?style=for-the-badge&logo=sqlite">
+  <img src="https://img.shields.io/badge/SQL-Learning-blue?style=for-the-badge&logo=mysql">
+  <img src="https://img.shields.io/badge/Open%20Source-Project-success?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Exercises-Included-orange?style=for-the-badge">
+</p>
 
-```bash
-sqlite3 db/db.sqlite < db/reset.sql
-```
+<p align="center">
+  <a href="#-acerca-de-topsify">Acerca</a> •
+  <a href="#-características">Características</a> •
+  <a href="#-estructura-de-la-base-de-datos">Base de Datos</a> •
+  <a href="#-instalación">Instalación</a> •
+  <a href="#-ejercicios-y-workshops">Workshops</a>
+</p>
 
-Be aware that any migrations and seeds you have written will need to be
-reapplied in the correct order.
+</div>
 
-## The features table
+---
 
-You can head to Spotify's
-[API documentation](https://developer.spotify.com/documentation/web-api/reference/get-audio-features)
-for an explanation of the columns in the `features` table.
+# 🌊 Acerca de Topsify
 
-## Creating reports
+**Topsify** es una plataforma educativa enfocada en el aprendizaje práctico de:
 
-Open `queries/example.sql` and put the line
+- 📊 Bases de datos
+- 🗄️ SQL y SQLite
+- 📈 Reportes y análisis de datos
+- 🎵 Sistemas de streaming musical
+- 🧠 Modelado relacional
 
-```sql
-.mode json
-```
+El proyecto simula una gran plataforma de música con usuarios, artistas, álbumes, canciones y características de audio similares a Spotify.
 
-at the top of the file. This makes `sqlite3` output the results as JSON.
+---
 
-Now, run
+# ✨ Características
 
-```bash
-sqlite3 db/db.sqlite < queries/example.sql > reports/example.json
-```
+## 🎵 Sistema Musical
 
-and open `reports/example.json`. Your query results are now saved in a JSON
-file!
+- 🎧 Gestión de artistas
+- 💿 Álbumes y canciones
+- 📂 Features de audio
+- 👤 Usuarios registrados
+- 📈 Estadísticas musicales
 
-## Schema
+---
 
-Here's a glance at how the database is set up.
+## 📊 Aprendizaje SQL
+
+- 🗄️ Consultas SQL reales
+- 📑 Reportes JSON
+- 🔍 Ejercicios guiados
+- 🧠 Workshops progresivos
+- ⚡ Prácticas de análisis de datos
+
+---
+
+## 🚀 Herramientas Educativas
+
+- 📚 Ejercicios por días
+- 🧪 Sistema de pruebas automáticas
+- 🖥️ Integración con VSCode
+- 🔥 Base de datos lista para usar
+
+---
+
+# 📸 Preview
+
+<div align="center">
+
+<img src="./web/img/logo.png" width="300"/>
+
+</div>
+
+---
+
+# 🧠 Estructura de la Base de Datos
+
+## 📦 Entidades principales
+
+- 👤 Users
+- 🎤 Artists
+- 💿 Albums
+- 🎵 Tracks
+- 📊 Features
+
+---
+
+# 🗂️ Modelo Relacional
 
 ```mermaid
 erDiagram
     users {
-        INTEGER id PK "Primary Key"
-        TEXT username "Unique"
-        TEXT first_name
-        TEXT last_name
-        TEXT email "Unique"
-        TEXT avatar
-        TEXT password "Hashed"
+        INTEGER id PK
+        TEXT username
+        TEXT email
     }
 
     artists {
-        TEXT id PK "Primary Key"
+        TEXT id PK
         TEXT name
-        TEXT url
     }
 
     albums {
-        TEXT id PK "Primary Key"
+        TEXT id PK
+        TEXT artist_id FK
         TEXT name
-        TEXT artist_id FK "Foreign Key to artists"
-        TEXT release_date
-        TEXT image_url
     }
 
     tracks {
-        TEXT id PK "Primary Key"
-        TEXT album_id FK "Foreign Key to albums"
+        TEXT id PK
+        TEXT album_id FK
         TEXT name
-        BOOLEAN explicit
-        TEXT preview_url
-        INTEGER disc_number
-        INTEGER track_number
-        REAL duration_ms
     }
 
     features {
-        TEXT track_id PK "Primary Key, FK to tracks"
+        TEXT track_id PK
         REAL danceability
         REAL energy
-        INTEGER key
-        REAL loudness
-        INTEGER mode
-        REAL speechiness
-        REAL acousticness
-        REAL instrumentalness
-        REAL liveness
-        REAL valence
         REAL tempo
-        INTEGER time_signature
     }
 
-    artists ||--o{ albums : "has"
-    albums ||--o{ tracks : "contains"
-    tracks ||--|| features : "described by"
-```
+    artists ||--o{ albums : has
+    albums ||--o{ tracks : contains
+    tracks ||--|| features : described_by
