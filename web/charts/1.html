@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/index.css">
+  <link rel="stylesheet" href="/css/charts.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js" defer></script>
+  <script src="/js/chart-1.js" defer></script>
+  <title>Explicit Tracks by Artist - Topsify</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__logo-container">
+      <img src="/img/logo.png" alt="Topsify Logo" class="header__logo">
+      <h1 class="header__title">Topsify</h1>
+    </div>
+    <nav class="header__nav">
+      <ul class="header__nav-list">
+        <li class="header__nav-item"><a href="/index.html" class="header__nav-link">Home</a></li>
+        <li class="header__nav-item"><a href="/albums.html" class="header__nav-link">Albums</a></li>
+        <li class="header__nav-item"><a href="/artists.html" class="header__nav-link">Artists</a></li>
+        <li class="header__nav-item"><a href="/tracks.html" class="header__nav-link">Tracks</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+    <section class="chart-section">
+      <h2 class="chart-section__title">Explicit Tracks by Artist</h2>
+      <canvas id="explicitTracksChart"></canvas>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="footer__text">&copy; 2024 Topsify. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+/* Basic styling for the tracks page */
+.tracks {
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.tracks__title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--color-primary);
+}
+
+#tracksTable {
+  width: 100%;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+#tracksTable th,
+#tracksTable td {
+  padding: 10px;
+  text-align: left;
+}
+
+#tracksTable th {
+  background-color: var(--color-secondary);
+  color: var(--color-accent);
+}
+
+#tracksTable tr:nth-child(even) {
+  background-color: var(--color-bg);
+}
+
+#tracksTable tr:nth-child(odd) {
+  background-color: var(--color-accent);
+  color: var(--color-secondary);
+}

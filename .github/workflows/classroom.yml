@@ -1,0 +1,183 @@
+name: Autograding Tests
+'on':
+  - push
+  - workflow_dispatch
+  - repository_dispatch
+permissions:
+  checks: write
+  actions: read
+  contents: read
+jobs:
+  run-autograding-tests:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-classroom[bot]'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Exercise 1a
+        id: exercise-1a
+        uses: education/autograding-command-grader@v1
+        with:
+          test-name: Exercise 1a
+          command: './test.sh 1a'
+          timeout: 1
+          max-score: 1
+      - name: Exercise 1b
+        id: exercise-1b
+        uses: education/autograding-command-grader@v1
+        with:
+          test-name: Exercise 1b
+          command: './test.sh 1b'
+          timeout: 1
+          max-score: 1
+      - name: Exercise 2a
+        id: exercise-2a
+        uses: education/autograding-command-grader@v1
+        with:
+          test-name: Exercise 2a
+          command: './test.sh 2a'
+          timeout: 1
+          max-score: 1
+      - name: Exercise 2b
+        id: exercise-2b
+        uses: education/autograding-command-grader@v1
+        with:
+          test-name: Exercise 2b
+          command: './test.sh 2b'
+          timeout: 1
+          max-score: 1
+      - name: Exercise 3a
+        id: exercise-3a
+        uses: education/autograding-command-grader@v1
+        with:
+          test-name: Exercise 3a
+          command: './test.sh 3a'
+          timeout: 1
+          max-score: 1
+      - name: Exercise 3b
+        id: exercise-3b
+        uses: education/autograding-command-grader@v1
+        with:
+          test-name: Exercise 3b
+          command: './test.sh 3b'
+          timeout: 1
+          max-score: 1
+      - name: Exercise 4a
+        id: exercise-4a
+        uses: education/autograding-command-grader@v1
+        with:
+          test-name: Exercise 4a
+          command: './test.sh 4a'
+          timeout: 1
+          max-score: 1
+      - name: Exercise 4b
+        id: exercise-4b
+        uses: education/autograding-command-grader@v1
+        with:
+          test-name: Exercise 4b
+          command: './test.sh 4b'
+          timeout: 1
+          max-score: 1
+      - name: Exercise 5a
+        id: exercise-5a
+        uses: education/autograding-command-grader@v1
+        with:
+          test-name: Exercise 5a
+          command: './test.sh 5a'
+          timeout: 1
+          max-score: 1
+      - name: Exercise 5b
+        id: exercise-5b
+        uses: education/autograding-command-grader@v1
+        with:
+          test-name: Exercise 5b
+          command: './test.sh 5b'
+          timeout: 1
+          max-score: 1
+      - name: Exercise 6a
+        id: exercise-6a
+        uses: education/autograding-command-grader@v1
+        with:
+          test-name: Exercise 6a
+          command: './test.sh 6a'
+          timeout: 1
+          max-score: 1
+      - name: Exercise 6b
+        id: exercise-6b
+        uses: education/autograding-command-grader@v1
+        with:
+          test-name: Exercise 6b
+          command: './test.sh 6b'
+          timeout: 1
+          max-score: 1
+      - name: Exercise 7a
+        id: exercise-7a
+        uses: education/autograding-command-grader@v1
+        with:
+          test-name: Exercise 7a
+          command: './test.sh 7a'
+          timeout: 1
+          max-score: 1
+      - name: Exercise 7b
+        id: exercise-7b
+        uses: education/autograding-command-grader@v1
+        with:
+          test-name: Exercise 7b
+          command: './test.sh 7b'
+          timeout: 1
+          max-score: 1
+      - name: Exercise 8a
+        id: exercise-8a
+        uses: education/autograding-command-grader@v1
+        with:
+          test-name: Exercise 8a
+          command: './test.sh 8a'
+          timeout: 1
+          max-score: 1
+      - name: Exercise 8b
+        id: exercise-8b
+        uses: education/autograding-command-grader@v1
+        with:
+          test-name: Exercise 8b
+          command: './test.sh 8b'
+          timeout: 1
+          max-score: 1
+      - name: Exercise 9a
+        id: exercise-9a
+        uses: education/autograding-command-grader@v1
+        with:
+          test-name: Exercise 9a
+          command: './test.sh 9a'
+          timeout: 1
+          max-score: 1
+      - name: Exercise 9b
+        id: exercise-9b
+        uses: education/autograding-command-grader@v1
+        with:
+          test-name: Exercise 9b
+          command: './test.sh 9b'
+          timeout: 1
+          max-score: 1
+      - name: Autograding Reporter
+        uses: education/autograding-grading-reporter@v1
+        env:
+          EXERCISE-1A_RESULTS: '${{steps.exercise-1a.outputs.result}}'
+          EXERCISE-1B_RESULTS: '${{steps.exercise-1b.outputs.result}}'
+          EXERCISE-2A_RESULTS: '${{steps.exercise-2a.outputs.result}}'
+          EXERCISE-2B_RESULTS: '${{steps.exercise-2b.outputs.result}}'
+          EXERCISE-3A_RESULTS: '${{steps.exercise-3a.outputs.result}}'
+          EXERCISE-3B_RESULTS: '${{steps.exercise-3b.outputs.result}}'
+          EXERCISE-4A_RESULTS: '${{steps.exercise-4a.outputs.result}}'
+          EXERCISE-4B_RESULTS: '${{steps.exercise-4b.outputs.result}}'
+          EXERCISE-5A_RESULTS: '${{steps.exercise-5a.outputs.result}}'
+          EXERCISE-5B_RESULTS: '${{steps.exercise-5b.outputs.result}}'
+          EXERCISE-6A_RESULTS: '${{steps.exercise-6a.outputs.result}}'
+          EXERCISE-6B_RESULTS: '${{steps.exercise-6b.outputs.result}}'
+          EXERCISE-7A_RESULTS: '${{steps.exercise-7a.outputs.result}}'
+          EXERCISE-7B_RESULTS: '${{steps.exercise-7b.outputs.result}}'
+          EXERCISE-8A_RESULTS: '${{steps.exercise-8a.outputs.result}}'
+          EXERCISE-8B_RESULTS: '${{steps.exercise-8b.outputs.result}}'
+          EXERCISE-9A_RESULTS: '${{steps.exercise-9a.outputs.result}}'
+          EXERCISE-9B_RESULTS: '${{steps.exercise-9b.outputs.result}}'
+        with:
+          runners: exercise-1a,exercise-1b,exercise-2a,exercise-2b,exercise-3a,exercise-3b,exercise-4a,exercise-4b,exercise-5a,exercise-5b,exercise-6a,exercise-6b,exercise-7a,exercise-7b,exercise-8a,exercise-8b,exercise-9a,exercise-9b

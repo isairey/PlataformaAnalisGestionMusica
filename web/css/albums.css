@@ -1,0 +1,52 @@
+.albums {
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.albums__title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--color-primary);
+}
+
+.albums__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.album-card {
+  background-color: var(--color-accent);
+  color: var(--color-secondary);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.album-card:hover {
+  transform: translateY(-10px);
+}
+
+.album-card__name {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+.album-card__artist {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.album-card__release-date {
+  font-size: 0.875rem;
+  margin-bottom: 10px;
+}
+
+.album-card__image {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}

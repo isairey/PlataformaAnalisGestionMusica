@@ -1,0 +1,128 @@
+/* Define custom properties for the color palette */
+:root {
+  --color-primary: #1db954; /* Green from logo */
+  --color-secondary: #191414; /* Dark color for contrast */
+  --color-accent: #ffffff; /* White for text */
+  --color-bg: #f4f4f4; /* Light background color */
+  --color-dark-bg: #333333; /* Darker background for footer */
+  --font-family: 'Arial', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--color-bg);
+  color: var(--color-secondary);
+  display: flex;
+  flex-direction: column;
+  line-height: 1.6;
+}
+
+.header {
+  background-color: var(--color-secondary);
+  color: var(--color-accent);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.header__logo {
+  height: 50px;
+  margin-right: 10px;
+}
+
+.header__title {
+  font-size: 1.5rem;
+}
+
+.header__nav {
+  background-color: var(--color-secondary);
+}
+
+.header__nav-list {
+  display: flex;
+  list-style: none;
+}
+
+.header__nav-item {
+  margin-left: 15px;
+}
+
+.header__nav-link {
+  color: var(--color-accent);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.header__nav-link:hover {
+  color: var(--color-primary);
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero {
+  background-color: var(--color-primary);
+  color: var(--color-accent);
+  padding: 50px;
+  border-radius: 10px;
+}
+
+.hero__title {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero__subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+}
+
+.hero__cta-button {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero__cta-button:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-accent);
+}
+
+.footer {
+  background-color: var(--color-dark-bg);
+  color: var(--color-accent);
+  text-align: center;
+  padding: 10px 0;
+  flex-shrink: 0;
+}

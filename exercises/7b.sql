@@ -1,0 +1,2 @@
+-- The user Sally_Kunde needs to update their email!
+-- It should now be "sally.kunde@gmail.com"

@@ -1,0 +1,34 @@
+/* Basic styling for the chart page */
+.chart-section {
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.chart-section__title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--color-primary);
+}
+
+#explicitTracksChart {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#characteristicChartsContainer {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+#characteristicChartsContainer canvas {
+  max-width: 400px;
+  max-height: 400px;
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+}
