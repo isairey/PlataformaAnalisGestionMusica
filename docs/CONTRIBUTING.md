@@ -1,6 +1,6 @@
 <div align="center">
 
-<img width="160" src="./web/img/logo.png" />
+<img width="160" src="../web/img/logo.png" />
 
 # 🎵 Topsify
 
