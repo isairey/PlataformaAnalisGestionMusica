@@ -1,79 +1,316 @@
+<div align="center">
+
+<img width="180" src="./web/img/logo.png" />
+
+# 🎵 Topsify
+
+### Plataforma de análisis y gestión de datos musicales 🚀
+
 <p align="center">
-  <img width="200px" src="./web/img/logo.png" alt="Topsify logo"/>
+  <b>Topsify</b> es un proyecto enfocado en el análisis de datos para una plataforma de streaming musical, diseñado para practicar bases de datos, consultas SQL, estadísticas y procesamiento de información a gran escala.
 </p>
 
-# Topsify
+<p align="center">
+  <img src="https://img.shields.io/badge/SQLite-Database-003B57?style=for-the-badge&logo=sqlite">
+  <img src="https://img.shields.io/badge/SQL-Exercises-orange?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Open%20Source-Learning-success?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Data-Analytics-blue?style=for-the-badge">
+</p>
 
-Welcome to Topsify! We're a huge music streaming service with a global user base
-and eye-watering amounts of data.
+<p align="center">
+  <a href="#-preview">Preview</a> •
+  <a href="#-características">Características</a> •
+  <a href="#-tecnologías-utilizadas">Tecnologías</a> •
+  <a href="#-instalación">Instalación</a> •
+  <a href="#-ejercicios">Ejercicios</a>
+</p>
 
-We're so glad you're here - corporate have been asking for reports, stats and
-data, but the team is stretched thin at the moment trying to get the UI right.
-Let's get working on the database straight away.
+</div>
 
-## Getting started
+---
 
-1. Make sure your machine is set up according to the instructions with
+# 🌊 Acerca de Topsify
 
-   - [bash](https://tech-docs.corndel.com/bash/)
-   - [vscode](https://tech-docs.corndel.com/vscode/)
-   - [git](https://tech-docs.corndel.com/git/)
-   - [sqlite](https://tech-docs.corndel.com/sql/installation-linux.html)
+**Topsify** simula una plataforma global de streaming musical que maneja grandes cantidades de datos relacionados con:
 
-1. Clone the repository (i.e. download it), so you have a copy on your machine.
+- 🎵 Canciones
+- 👤 Usuarios
+- 📊 Estadísticas
+- 📂 Playlists
+- 🎧 Streams
+- 🌎 Información global
 
-1. Once cloned, open a terminal in the project folder, and run
+El proyecto está orientado al aprendizaje y práctica de:
 
-   ```bash
-   sudo chmod +x ./test.sh
-   ```
+- SQL
+- SQLite
+- Consultas avanzadas
+- Análisis de datos
+- Testing automatizado
 
-   to make the test script executable.
+---
 
-1. Install the recommended
-   [Live Server extension](vscode:extension/ritwickdey.LiveServer)
+# 📸 Preview
 
-## Running tests
+<div align="center">
 
-To check if your deep dive tests pass, you can run:
+<img src="./web/img/logo.png" width="300"/>
+
+</div>
+
+---
+
+# ✨ Características
+
+## 📊 Análisis de Datos
+
+- 📈 Consultas SQL avanzadas
+- 🎵 Gestión de datos musicales
+- 👥 Estadísticas de usuarios
+- 📂 Manejo de playlists
+- ⚡ Procesamiento eficiente
+
+---
+
+## 🧪 Sistema de Ejercicios
+
+- 📚 Ejercicios diarios
+- 🧠 Workshops prácticos
+- ✅ Tests automatizados
+- 🚀 Aprendizaje progresivo
+
+---
+
+## 💻 Entorno de Desarrollo
+
+- 🛠️ SQLite
+- ⚡ Bash scripts
+- 🔥 VS Code integration
+- 🧪 Testing automático
+
+---
+
+# 🛠️ Tecnologías Utilizadas
+
+## 💾 Base de Datos
+
+<p>
+  <img src="https://skillicons.dev/icons?i=sqlite" />
+</p>
+
+- SQLite
+- SQL Queries
+- Relational Databases
+
+---
+
+## ⚙️ Herramientas
+
+<p>
+  <img src="https://skillicons.dev/icons?i=bash,vscode,git,github" />
+</p>
+
+- Bash
+- VS Code
+- Git & GitHub
+
+---
+
+# 📂 Estructura del Proyecto
+
+```bash
+Topsify/
+│
+├── docs/              # Ejercicios y workshops
+├── web/               # Recursos web
+├── test.sh            # Script de pruebas
+├── database/          # Base de datos SQLite
+└── README.md
+```
+
+---
+
+# ⚡ Instalación
+
+## 1️⃣ Clonar el repositorio
+
+```bash
+git clone <repository-url>
+```
+
+---
+
+## 2️⃣ Entrar al proyecto
+
+```bash
+cd Topsify
+```
+
+---
+
+# 🔥 Requisitos
+
+## 🛠️ Software necesario
+
+- Bash
+- VS Code
+- Git
+- SQLite
+
+---
+
+# ▶️ Configurar entorno
+
+## Dar permisos al script
+
+```bash
+sudo chmod +x ./test.sh
+```
+
+---
+
+## Extensión recomendada
+
+Instalar en VS Code:
+
+```bash
+Live Server
+```
+
+---
+
+# 🧪 Ejecutar Tests
+
+## Ejecutar todas las pruebas
 
 ```bash
 ./test.sh
 ```
 
-> [!WARNING]
->
-> Make sure you include the `./`, and that you run this from the project root
-> directory.
+---
 
-> [!TIP]
->
-> You can also specify the tests to run like so:
->
-> ```bash
-> ./test.sh 1a 1b 2a 2b 3a
-> ```
+## Ejecutar pruebas específicas
 
-## Exercises
+```bash
+./test.sh 1a 1b 2a 2b 3a
+```
 
-The exercises for each day are in the `docs` folder:
+---
 
-- [Day 1 Exercises](./docs/day-1-exercises.md)
+# 📚 Ejercicios
 
-- [Day 2 Exercises](./docs/day-2-exercises.md)
+Los ejercicios se encuentran dentro de:
 
-- [Day 3 Exercises](./docs/day-3-exercises.md)
+```bash
+docs/
+```
 
-## Workshops
+## Disponibles
 
-> [!NOTE]
->
-> Be sure to read `CONTRIBUTING.md` before getting started on the workshops.
+- 📅 Day 1 Exercises
+- 📅 Day 2 Exercises
+- 📅 Day 3 Exercises
 
-The workshop for each day can also be found in the `docs` folder:
+---
 
-- [Day 1 Workshop](./docs/day-1-workshop.md)
+# 🛠️ Workshops
 
-- [Day 2 Workshop](./docs/day-2-workshop.md)
+También se incluyen workshops prácticos para cada día:
 
-- [Day 3 Workshop](./docs/day-3-workshop.md)
+- 🚀 Day 1 Workshop
+- 🚀 Day 2 Workshop
+- 🚀 Day 3 Workshop
+
+---
+
+# 🧠 Objetivos del Proyecto
+
+## 🎯 Aprender y practicar
+
+- SQL avanzado
+- Diseño de bases de datos
+- Queries complejas
+- Relaciones entre tablas
+- Análisis de datos
+- Optimización de consultas
+
+---
+
+# 📊 Roadmap
+
+## 🚧 Próximamente
+
+- 📈 Dashboard estadístico
+- 🌐 Visualización web
+- 🔥 Queries avanzadas
+- ☁️ Integración backend
+- 📊 Reportes automáticos
+- 🎵 Simulación de streaming real
+
+---
+
+# 🤝 Contribuciones
+
+Las contribuciones son bienvenidas ❤️
+
+## Pasos para contribuir
+
+1. Haz Fork del proyecto
+2. Crea una rama
+
+```bash
+git checkout -b feature/nueva-funcion
+```
+
+3. Realiza tus cambios
+4. Haz commit
+
+```bash
+git commit -m "✨ Nueva funcionalidad"
+```
+
+5. Haz push
+
+```bash
+git push origin feature/nueva-funcion
+```
+
+6. Abre un Pull Request 🚀
+
+---
+
+# 👨‍💻 Autor
+
+<div align="center">
+
+<img src="https://github.com/isairey.png" width="120" style="border-radius:50%" />
+
+## Open Source Developer
+
+Apasionado por bases de datos, análisis de información y plataformas de streaming musical.
+
+</div>
+
+---
+
+# 🌟 Apoya el Proyecto
+
+Si te gusta Topsify:
+
+⭐ Dale una estrella al repositorio  
+🍴 Haz Fork del proyecto  
+📢 Compártelo con otros desarrolladores
+
+---
+
+# 📜 Licencia
+
+Este proyecto está destinado al aprendizaje y práctica educativa.
+
+---
+
+<div align="center">
+
+### 🎶 Topsify — Datos, música y análisis en un solo proyecto.
+
+</div>
