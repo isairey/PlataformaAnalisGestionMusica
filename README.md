@@ -135,7 +135,7 @@ Topsify/
 ## 1️⃣ Clonar el repositorio
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/isairey/PlataformaAnalisGestionMusica.git
 ```
 
 ---
@@ -143,7 +143,7 @@ git clone <repository-url>
 ## 2️⃣ Entrar al proyecto
 
 ```bash
-cd Topsify
+cd PlataformaAnalisGestionMusica
 ```
 
 ---
